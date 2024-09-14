@@ -1,0 +1,132 @@
+.hero3-text {
+    width: 100%;
+    text-align: center;
+}
+
+.text3{
+    margin-top: 80px;
+}
+
+.text3 p{
+    margin-bottom: 40px;
+}
+
+.hero3 h2 {
+    font-weight: 500;
+    font-size: 35px;
+    color: #0B132A;
+    text-align: center;
+}
+
+.hero3 p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #4F5665;
+    display: block;
+
+}
+
+
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    border: 2px lightgrey solid;
+    text-align: left;
+}
+
+
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border: 2px solid red;
+    animation: blink 1s infinite;
+}
+
+
+@keyframes blink {
+    0%, 100% {
+        border-color: red;
+    }
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.avatar-img {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar-img img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0B132A;
+    margin-right: 60px;
+}
+
+.location {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.rating p {
+    font-size: 16px;
+    color: #0B132A;
+}
+
+.rating img {
+    width: 16px;
+    height: 16px;
+}
+
+
+.testimonial-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 15px;
+}

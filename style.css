@@ -1,0 +1,14 @@
+@import "styles/header.css";
+@import "styles/herosection.css";
+@import "styles/featuressection.css";
+@import "styles/review_section.css";
+@import "styles/subscribe_section.css";
+@import "styles/footer.css";
+@import "styles/review_section.css";
+
+body {
+    font-family: 'SansSerif', Rubik, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

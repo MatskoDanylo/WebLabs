@@ -1,0 +1,55 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: #0B132A;
+    text-align: left;
+}
+
+.hero h1 span {
+    color: #0B132A;
+    text-align: left;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #4F5665;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.get-started {
+    background-color: #F53838;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.get-started:hover {
+    background-color: #D12C43;
+}
+
+.hero-image img {
+    width:  611px;
+    height: 406px;
+    left: 30px;
+}
+

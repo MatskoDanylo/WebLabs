@@ -1,0 +1,87 @@
+header {
+    background-color:#FFFFFF;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-line {
+    color:#FFFFFF ;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1200px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0B132A;
+}
+
+
+.nav {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #4F5665;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s linear;
+}
+
+.nav-item:hover {
+    color: #F53855;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sign-in {
+    margin-right: 40px;
+}
+
+.sign-in a {
+    color: #4F5665;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s linear;
+}
+
+.sign-in a:hover {
+    color: #F53855;
+}
+
+.sign-up a {
+    border: 1px solid #F53855;
+    background-color: #FFFFFF;
+    color: #F53855;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s linear;
+}
+
+.sign-up a:hover {
+    background-color: #F53855;
+    color: #FFFFFF;
+}

@@ -23,19 +23,19 @@ header {
     margin-right: 10px;
 }
 
-.site-name {
+.header-logo span {
     font-size: 20px;
     font-weight: 700;
     color: #0B132A;
 }
 
 
-.nav {
+.header-line nav {
     display: flex;
     gap: 50px;
 }
 
-.nav-item {
+.header-line a {
     text-decoration: none;
     color: #4F5665;
     font-weight: 500;
@@ -43,7 +43,7 @@ header {
     transition: color 0.3s linear;
 }
 
-.nav-item:hover {
+.header-line a:hover {
     color: #F53855;
 }
 

@@ -1,9 +1,9 @@
-.unorderedlist ul {
+.unordered-list ul {
     list-style-type: none;
     padding: 0;
 }
 
-.unorderedlist li {
+.unordered-list li {
     color: #4F5665;
     list-style-type: none;
     display: flex;
@@ -14,7 +14,7 @@
     line-height: 30px;
 }
 
-.verify-icon {
+.unordered-list img {
     width: 24px;
     height: 24px;
     margin-right: 10px;

@@ -1,0 +1,256 @@
+.hero3-text {
+    width: 100%;
+    text-align: center;
+}
+
+.text3 {
+    margin-top: 80px;
+}
+
+.text3 p {
+    margin-bottom: 40px;
+}
+
+.hero3 h2 {
+    font-weight: 500;
+    font-size: 35px;
+    color: #0b132a;
+    text-align: center;
+}
+
+.hero3 p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #4f5665;
+    display: block;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    width: 30%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+    border: 2px lightgrey solid;
+    text-align: left;
+    animation: fadeSlideIn 1s ease forwards;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: #f53838;
+}
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.avatar-img {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar-img img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0b132a;
+    margin-right: 60px;
+}
+
+.location {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.rating p {
+    font-size: 16px;
+    color: #0b132a;
+}
+
+.rating img {
+    width: 16px;
+    height: 16px;
+}
+
+.testimonial-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+@media only screen and (max-width: 320px) {
+    .hero3-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text3 {
+        margin-top: 20px;
+    }
+
+    .text3 p {
+        margin-bottom: 20px;
+    }
+
+    .hero3 h2 {
+        font-weight: 500;
+        font-size: 24px;
+        color: #0b132a;
+        text-align: center;
+    }
+
+    .hero3 p {
+        font-size: 14px;
+        color: #4f5665;
+    }
+
+    .testimonial-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .testimonial-card {
+        width: 85%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .avatar-img img {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+
+    .user-name {
+        font-size: 14px;
+        white-space: nowrap;
+        margin-right: 40px;
+    }
+
+    .location {
+        margin-top: 5px;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .rating p {
+        font-size: 14px;
+        margin-right: 2px;
+    }
+
+    .rating img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .testimonial-text {
+        font-size: 12px;
+        line-height: 1.4;
+        margin-top: 10px;
+        white-space: nowrap;
+    }
+}
+@media only screen and (min-width: 2560px) {
+    .hero3 {
+        padding: 100px 80px;
+    }
+
+    .hero3 h2 {
+        font-size: 80px;
+        font-weight: 700;
+    }
+
+    .hero3 p {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+
+    .testimonial-container {
+        max-width: 2400px;
+        gap: 50px;
+        padding: 80px 60px;
+    }
+
+    .testimonial-card {
+        width: 30%;
+        padding: 60px;
+        border-radius: 20px;
+    }
+
+    .avatar-img img {
+        width: 100px;
+        height: 100px;
+        margin-right: 30px;
+    }
+
+    .user-name {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .location {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .rating p {
+        font-size: 40px;
+        margin-right: 10px;
+    }
+
+    .rating img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .testimonial-text {
+        font-size: 32px;
+        line-height: 1.8;
+        margin-top: 30px;
+        white-space: nowrap;
+    }
+}

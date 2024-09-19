@@ -1,0 +1,156 @@
+.subscribe-section {
+    display: grid;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 90px auto -50px;
+    padding: 30px 20px;
+}
+
+.subscribe-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 150px;
+}
+
+.subscribe-text h2 {
+    text-align: left;
+    font-size: 30px;
+    color: #0b132a;
+    margin-bottom: 10px;
+}
+
+.subscribe-text p {
+    font-size: 16px;
+    color: #4f5665;
+}
+
+.subscribe-button {
+    margin: auto 50px auto auto;
+}
+
+.subscribe-button button {
+    width: 250px;
+    background-color: #f53838;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.2s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+}
+
+.subscribe-button button:hover {
+    background-color: #d12c43;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.subscribe-button button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .subscribe-section {
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 20px 10px;
+    }
+
+    .subscribe-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .subscribe-text h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .subscribe-text p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .subscribe-button {
+        margin: 0 auto;
+    }
+
+    .subscribe-button button {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 2560px) {
+    .subscribe-section {
+        max-width: 2300px;
+        margin: 120px auto -50px;
+        padding: 80px 60px;
+        border-radius: 20px;
+    }
+
+    .subscribe-content {
+        grid-template-columns: 2fr 1fr;
+        gap: 200px;
+    }
+
+    .subscribe-text h2 {
+        font-size: 60px;
+        color: #0b132a;
+        margin-bottom: 30px;
+    }
+
+    .subscribe-text p {
+        font-size: 30px;
+        color: #4f5665;
+        line-height: 1.8;
+        margin-bottom: 40px;
+    }
+
+    .subscribe-button {
+        margin: auto 0 auto auto;
+    }
+
+    .subscribe-button button {
+        width: 350px;
+        padding: 25px 60px;
+        font-size: 26px;
+        background-color: #f53838;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .subscribe-button button:hover {
+        background-color: #d12c43;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+}

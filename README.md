@@ -2,8 +2,9 @@
 
 Виконав: Мацко Данило Любомирович (ІР-21)
 
-Лабораторна робота №1 (Варіант 7)
+Лабораторна робота №2 
 
-Simple landing page
+Advanced landing
 
-Description: Create a landing page following the given design (Figma).
+Improve a landing page following the given design (same as
+previous) by adding full responsiveness and some animation

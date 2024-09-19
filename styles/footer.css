@@ -61,7 +61,7 @@
   color: #0b132a;
   font-weight: 600;
 }
-@media only screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .footer {
     background-color: #f6f5f5;
     padding: 10px 0;
@@ -117,7 +117,7 @@
     font-weight: 600;
   }
 }
-@media only screen and (min-width: 2560px) {
+@media screen and (min-width: 2560px) {
   .footer {
     background-color: #f6f5f5;
     padding: 40px 0;
@@ -136,7 +136,7 @@
   }
 
   .footer-left p {
-    font-size: 30px;
+    font-size: 35px;
     color: #afb5c0;
   }
 
@@ -147,8 +147,8 @@
   }
 
   .footer-social img {
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
   }
 
   .footer-right {
@@ -157,12 +157,12 @@
   }
 
   .footer-right img {
-    width: 60px;
+    width: 80px;
     margin-right: 20px;
   }
 
   .footer-right p {
-    font-size: 28px;
+    font-size: 35px;
     color: #0b132a;
     font-weight: 600;
   }

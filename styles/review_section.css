@@ -119,7 +119,7 @@
   line-height: 1.6;
   margin-top: 15px;
 }
-@media only screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .hero3-text {
     width: 100%;
     text-align: center;
@@ -194,7 +194,7 @@
     white-space: nowrap;
   }
 }
-@media only screen and (min-width: 2560px) {
+@media screen and (min-width: 2560px) {
   .hero3 {
     padding: 100px 80px;
   }

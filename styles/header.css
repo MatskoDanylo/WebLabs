@@ -31,7 +31,7 @@ header {
 
 .header-line nav {
   display: flex;
-  gap: 50px;
+  gap: 40px;
 }
 
 .header-line a {
@@ -75,7 +75,7 @@ header {
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
-  padding: 8px 20px;
+  padding: 8px 35px;
   border-radius: 50px;
   transition: background-color 0.3s linear;
 }
@@ -99,32 +99,62 @@ header {
   transition: all 0.3s ease;
 }
 
-@media only screen and (max-width: 320px) {
+.menu-icon.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+.auth-buttons-mobile {
+  display: none;
+}
+@media screen and (max-width: 320px) {
   .header-line nav {
     display: none;
     flex-direction: column;
     background-color: #ffffff;
     position: absolute;
-    top: 70px;
+    top: 60px;
     right: 0;
-    width: 100%;
+    width: 100vw;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 10px;
+    gap: 25px;
   }
 
   .header-line nav.active {
     display: flex;
   }
 
-  .menu-icon {
-    display: flex;
-  }
-
   .auth-buttons {
     display: none;
   }
+
+  .auth-buttons-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .menu-icon {
+    display: flex;
+    gap: 4.3px;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
 }
 
-@media only screen and (min-width: 2560px) {
+@media screen and (min-width: 2560px) {
   .header {
     padding: 20px 60px;
   }
@@ -148,7 +178,7 @@ header {
 
   .header-line nav {
     display: flex;
-    gap: 150px;
+    gap: 100px;
   }
 
   .header-line a {
@@ -162,7 +192,7 @@ header {
   }
 
   .sign-up a {
-    padding: 14px 32px;
+    padding: 14px 60px;
   }
 
   .auth-buttons {

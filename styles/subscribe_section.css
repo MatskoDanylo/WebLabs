@@ -74,7 +74,7 @@
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .subscribe-section {
     max-width: 100%;
     margin: 10px auto;
@@ -108,7 +108,7 @@
     font-size: 14px;
   }
 }
-@media only screen and (min-width: 2560px) {
+@media screen and (min-width: 2560px) {
   .subscribe-section {
     max-width: 2300px;
     margin: 120px auto -50px;

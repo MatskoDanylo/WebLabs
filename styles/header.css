@@ -1,176 +1,176 @@
 header {
-    background-color: #ffffff;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .header-line {
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    max-width: 1200px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1200px;
 }
 
 .header-logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header-logo img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .header-logo span {
-    font-size: 20px;
-    font-weight: 700;
-    color: #0b132a;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0b132a;
 }
 
 .header-line nav {
-    display: flex;
-    gap: 50px;
+  display: flex;
+  gap: 50px;
 }
 
 .header-line a {
-    text-decoration: none;
-    color: #4f5665;
-    font-weight: 500;
-    font-size: 16px;
-    transition: color 0.3s linear;
+  text-decoration: none;
+  color: #4f5665;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s linear;
 }
 
 .header-line a:hover {
-    color: #f53855;
+  color: #f53855;
 }
 
 .auth-buttons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .sign-in {
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
 .sign-in a {
-    color: #4f5665;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    transition: color 0.3s linear;
+  color: #4f5665;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s linear;
 }
 
 .sign-in a:hover {
-    color: #f53855;
+  color: #f53855;
 }
 
 .sign-up a {
-    border: 1px solid #f53855;
-    background-color: #ffffff;
-    color: #f53855;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 8px 20px;
-    border-radius: 50px;
-    transition: background-color 0.3s linear;
+  border: 1px solid #f53855;
+  background-color: #ffffff;
+  color: #f53855;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: background-color 0.3s linear;
 }
 
 .sign-up a:hover {
-    background-color: #f53855;
-    color: #ffffff;
+  background-color: #f53855;
+  color: #ffffff;
 }
 
 .menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
 .menu-icon .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    transition: all 0.3s ease;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
 }
 
 @media only screen and (max-width: 320px) {
-    .header-line nav {
-        display: none;
-        flex-direction: column;
-        background-color: #ffffff;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-    }
+  .header-line nav {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
 
-    .header-line nav.active {
-        display: flex;
-    }
+  .header-line nav.active {
+    display: flex;
+  }
 
-    .menu-icon {
-        display: flex;
-    }
+  .menu-icon {
+    display: flex;
+  }
 
-    .auth-buttons {
-        display: none;
-    }
+  .auth-buttons {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 2560px) {
-    .header {
-        padding: 20px 60px;
-    }
+  .header {
+    padding: 20px 60px;
+  }
 
-    .header-line {
-        max-width: 100%;
-        padding: 0 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .header-line {
+    max-width: 100%;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .header-logo img {
-        width: 70px;
-        height: auto;
-    }
+  .header-logo img {
+    width: 70px;
+    height: auto;
+  }
 
-    .header-logo span {
-        font-size: 36px;
-    }
+  .header-logo span {
+    font-size: 36px;
+  }
 
-    .header-line nav {
-        display: flex;
-        gap: 150px;
-    }
+  .header-line nav {
+    display: flex;
+    gap: 150px;
+  }
 
-    .header-line a {
-        font-size: 36px;
-        padding: 8px 16px;
-    }
+  .header-line a {
+    font-size: 36px;
+    padding: 8px 16px;
+  }
 
-    .sign-in a,
-    .sign-up a {
-        font-size: 36px;
-    }
+  .sign-in a,
+  .sign-up a {
+    font-size: 36px;
+  }
 
-    .sign-up a {
-        padding: 14px 32px;
-    }
+  .sign-up a {
+    padding: 14px 32px;
+  }
 
-    .auth-buttons {
-        gap: 30px;
-    }
+  .auth-buttons {
+    gap: 30px;
+  }
 
-    .menu-icon .bar {
-        width: 35px;
-        height: 4px;
-    }
+  .menu-icon .bar {
+    width: 35px;
+    height: 4px;
+  }
 }

@@ -1,0 +1,232 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #008cba;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+header img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.signButtons a {
+    margin-left: 20px;
+    text-decoration: none;
+    background-color: white;
+    color: #008cba;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.signButtons a:hover {
+    background-color: #e6e6e6;
+}
+
+#container {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.section-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-menu form input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    width: 250px;
+}
+
+.search-menu button {
+    border: none;
+    background-color: #008cba;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-menu button img {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.search-menu button:hover {
+    background-color: #005f7a;
+}
+
+.create a {
+    background-color: #008cba;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.create a:hover {
+    background-color: #005f7a;
+}
+
+.item-manager {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-manager h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.sort-div select, .count-div button {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.count-div output {
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+
+
+.section-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item-storage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust 300px based on the width you want for each card */
+    grid-gap: 20px; /* Add some gap between the items */
+    padding: 20px;
+}
+
+
+.item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.item-info {
+    text-align: center;
+}
+
+.item-info h1 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.item-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.item-buttons {
+    margin-top: 15px;
+}
+
+.item-buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: #f39c12;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.item-buttons button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.item-buttons a:hover, .item-buttons button:hover {
+    opacity: 0.8;
+}
+
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li img {
+    width: 30px;
+}

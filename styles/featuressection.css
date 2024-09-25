@@ -30,7 +30,7 @@
 
 .hero2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   max-width: 100%;
   margin: 0 auto;
@@ -51,7 +51,6 @@
 }
 
 .hero2-text {
-  width: 100%;
   display: flex;
 }
 
@@ -72,13 +71,14 @@
   text-align: left;
 }
 
+
 @media screen and (max-width: 320px) {
   .hero2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 100%;
-    padding: 10px 0px;
+    padding: 10px 0;
     background: linear-gradient(
       180deg,
       #f6f5f5 -45.04%,
@@ -96,7 +96,6 @@
 
   .hero2-image img {
     width: 100%;
-
     height: auto;
   }
 
@@ -134,6 +133,134 @@
     text-align: center;
   }
 }
+
+
+@media screen and (min-width: 321px) and  (max-width: 768px) {
+  .hero2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+
+  .hero2-image {
+    width: 90%;
+    height: auto;
+    margin: 0 0 20px 0;
+  }
+
+  .hero2-text {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .text2 {
+    margin-left: 0;
+    padding: 0 10px;
+  }
+
+  .hero2 h2 {
+    font-size: 28px;
+    line-height: 1.4;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero2 p {
+    font-size: 16px;
+    margin-top: 15px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .unordered-list ul {
+    padding-left: 260px;
+  }
+
+  .unordered-list li {
+    font-size: 14px;
+    line-height: 28px;
+    margin-top: 10px;
+  }
+
+  .unordered-list img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 30px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(
+            180deg,
+            #f6f5f5 -45.04%,
+            #ffffff 19.67%,
+            #f4f3f3 88.56%
+    );
+  }
+
+  .hero2-image {
+    width: 480px;
+    height: auto;
+    margin-right: 50px;
+    margin-left: auto;
+  }
+
+  .hero2-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .hero2 h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0b132a;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .hero2 p {
+    font-size: 16px;
+    color: #4f5665;
+    margin-top: 15px;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+
+  .unordered-list li {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 10px;
+  }
+
+  .unordered-list img {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+  }
+
+.text2{
+margin-left: 50px}
+}
+
+
+
+
+
 @media screen and (min-width: 2560px) {
   .hero2 {
     max-width: 100%;
@@ -185,3 +312,6 @@
     margin-left: 300px;
   }
 }
+
+
+

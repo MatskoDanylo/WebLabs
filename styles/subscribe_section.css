@@ -108,6 +108,56 @@
     font-size: 14px;
   }
 }
+
+
+
+@media screen and (min-width: 321px) and  (max-width: 768px) {
+  .subscribe-section {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 25px 15px;
+    border-radius: 10px;
+  }
+
+  .subscribe-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .subscribe-text h2 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .subscribe-text p {
+    font-size: 16px;
+    color: #4f5665;
+    text-align: center;
+  }
+
+  .subscribe-button {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .subscribe-button button {
+    width: 100%;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .subscribe-button button:hover {
+    transform: scale(1.02);
+  }
+}
+
+
+
+
 @media screen and (min-width: 2560px) {
   .subscribe-section {
     max-width: 2300px;
@@ -154,3 +204,7 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   }
 }
+
+
+
+

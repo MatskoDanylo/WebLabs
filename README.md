@@ -4,6 +4,8 @@
 
 Лабораторна робота №4
 
+CRUD Javascript App: Create/Edit Pages
+
 In this work, you need to continue working and add two new 
 parts to your website - Create & Edit Pages
 

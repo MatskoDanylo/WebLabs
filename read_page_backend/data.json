@@ -1,0 +1,66 @@
+[
+    {
+        "id": 5,
+        "name": "aaaaaaaaaaaaaaaa",
+        "description": "sfgdxzfgzdfrgg",
+        "age": 11.0,
+        "price": 120.0,
+        "image": "/assets/png"
+    },
+    {
+        "id": 7,
+        "name": "ababab",
+        "description": "asdzsdgdxhfcyjxhg",
+        "age": 7.0,
+        "price": 10.0,
+        "image": "/assets/png"
+    },
+    {
+        "id": 3,
+        "name": "Birdie",
+        "description": "A singing bird",
+        "age": 1,
+        "price": 50,
+        "image": "/assets/bird.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Bobik",
+        "description": "A playful dog",
+        "age": 5,
+        "price": 300,
+        "image": "/assets/dog.jpg"
+    },
+    {
+        "id": 1,
+        "name": "Felix",
+        "description": "A friendly cat",
+        "age": 1.0,
+        "price": 100.0,
+        "image": "/assets/png"
+    },
+    {
+        "id": 6,
+        "name": "SDzsdvzsvzs",
+        "description": "sDVSDVzsdvzsdvfzs",
+        "age": 12.0,
+        "price": 12.0,
+        "image": "/assets/istockphoto-1354776457-612x612.jpg"
+    },
+    {
+        "id": 8,
+        "name": "wwwwwwwwwwwwwwwww",
+        "description": "wwwwwwwwwwwwwwwwww",
+        "age": 50.0,
+        "price": 60.0,
+        "image": "/assets/cat3.jpg"
+    },
+    {
+        "id": 7,
+        "name": "zzzzzzzzzzzzzzzz",
+        "description": "dghdghxchbf",
+        "age": 23.0,
+        "price": 11.0,
+        "image": "/assets/cat3.jpg"
+    }
+]

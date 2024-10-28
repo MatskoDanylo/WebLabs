@@ -6,9 +6,9 @@
 
 React.js: Catalog page
 
-Requirements: 
-
 Continue work on your React App by adding a page with Items list 
+
+Requirements: 
 
     • All of the requirements for previous React.js works should be kept.
 

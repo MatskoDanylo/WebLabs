@@ -15,8 +15,10 @@ const Catalog = () => {
 
   useEffect(() => {
     const applyFilters = () => {
+      const trimmedSearchItem = searchItem.trim().toLowerCase();
+
       let updatedPets = petsData.filter((pet) =>
-          pet.name.toLowerCase().includes(searchItem.toLowerCase())
+          pet.name.toLowerCase().includes(trimmedSearchItem)
       );
 
       if (sortOption !== "Choose one...") {
@@ -28,6 +30,7 @@ const Catalog = () => {
 
     applyFilters();
   }, [petsData, searchItem, sortOption]);
+
 
   const sortPets = (petsList, option) => {
     let sortedPets = [...petsList];

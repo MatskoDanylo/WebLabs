@@ -11,24 +11,20 @@ const EditPetForm = ({ pet, onSave, onCancel }) => {
     const validateInputs = () => {
         const newErrors = {};
 
-        // Name validation
         if (!name) {
             newErrors.name = "Name cannot be empty.";
         } else if (/\d/.test(name)) {
             newErrors.name = "Name cannot contain numbers.";
         }
 
-        // Description validation
         if (!description) {
             newErrors.description = "Description cannot be empty.";
         }
 
-        // Age validation
         if (age < 0.1 || age > 100) {
             newErrors.age = "Age must be between 0.1 and 100 years.";
         }
 
-        // Price validation
         if (price < 0 || price > 10000) {
             newErrors.price = "Price must be between 0 and 10,000.";
         }

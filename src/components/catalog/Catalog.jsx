@@ -7,6 +7,8 @@ import Footer from '../footer/Footer';
 import { PetContext } from './PetContext';
 import SortSection from './SortSection';
 
+const options = ["Choose one...", "Age (Low - High)", "Age (High - Low)", "Price (Low - High)", "Price (High - Low)", "Name (A - Z", "Name (Z - A)"]
+
 const Catalog = () => {
   const {petsData} = useContext(PetContext);
   const [searchItem, setSearchItem] = useState("");
@@ -99,7 +101,12 @@ const Catalog = () => {
           </div>
 
           <h2>Manage Pets</h2>
-          <SortSection sortOption={sortOption} handleSort={handleSort} />
+
+          <SortSection
+              options={options}
+              sortOption={sortOption}
+              handleSort={handleSort}
+          />
 
           <div className="total-pets-section">
             <h3>Total Pets Value</h3>

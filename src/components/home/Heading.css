@@ -1,0 +1,29 @@
+.text-content {
+    display: flex;
+    align-items: center;
+    max-width: 80%;
+    margin-bottom: 40px;
+    justify-content: center;
+    padding-left: 200px;
+}
+
+.text-content img {
+    width: 40%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.text-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    margin-top: 20px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.text {
+    max-width: 60%;
+}

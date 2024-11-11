@@ -17,9 +17,9 @@ const Catalog = () => {
   const [loading, setLoading] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [sortOption, setSortOption] = useState("Choose one...");
+  const [sortOption, setSortOption] = useState("name(a-z)");
 
-  // Стани для фільтрів
+  // Filter states
   const [minAge, setMinAge] = useState(0);
   const [maxAge, setMaxAge] = useState(100);
   const [minPrice, setMinPrice] = useState(0);
@@ -38,6 +38,11 @@ const Catalog = () => {
         setLoading(false);
       });
   }, []);
+
+  // Fetch pets when search or sort criteria change
+  useEffect(() => {
+    handleSearchAndSort();
+  }, [sortOption]); // Add sortOption dependency
 
   const handleSearchAndSort = () => {
     setLoading(true);
@@ -113,6 +118,8 @@ const Catalog = () => {
             <PrimaryButton label="Search & Sort" onClick={handleSearchAndSort} />
           </div>
         </div>
+        
+        {/* Pass the handleSort directly to update sortOption on selection */}
         <SortSection sortOption={sortOption} handleSort={(e) => setSortOption(e.target.value)} />
 
         {loading ? (

@@ -1,26 +1,18 @@
 [
     {
+        "id": 3,
+        "name": "Birdiee",
+        "description": "A singing bird",
+        "age": 3.0,
+        "price": 50.0,
+        "image": "/assets/bird.jpg"
+    },
+    {
         "id": 2,
         "name": "Bobik",
         "description": "A playful dog",
         "age": 8.0,
         "price": 300.0,
-        "image": "/assets/dog.jpg"
-    },
-    {
-        "id": 3,
-        "name": "Birdiee",
-        "description": "A singing bird",
-        "age": 1.0,
-        "price": 50.0,
-        "image": "/assets/bird.jpg"
-    },
-    {
-        "id": 4,
-        "name": "Bobik",
-        "description": "A playful dog",
-        "age": 5,
-        "price": 300,
         "image": "/assets/dog.jpg"
     },
     {
@@ -38,5 +30,13 @@
         "age": 6.0,
         "price": 600.0,
         "image": "/assets/garfield.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Zabik",
+        "description": "A playful dog",
+        "age": 5.0,
+        "price": 200.0,
+        "image": "/assets/dog.jpg"
     }
 ]

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import Heading from './Heading';
@@ -10,16 +10,28 @@ import Groom from './assets/pet_groom.jpg';
 import './Home.css';
 import { PetContext } from '../catalog/PetContext';
 import PetCard from '../catalog/PetCard';
+import { getPets } from '../../api/apiService';
 
 export default function Home() {
     const { petsData } = useContext(PetContext);
-    const [displayedPets, setDisplayedPets] = useState([]);
+    const [displayedPets, setDisplayedPets] = useState([]); // Empty initially
+    const [offset, setOffset] = useState(0);
+    const [hasMorePets, setHasMorePets] = useState(true); // Track "View More" button visibility
     const itemsPerLoad = 3;
 
-    const handleViewMore = () => {
-        const currentCount = displayedPets.length;
-        const newPets = petsData.slice(currentCount, currentCount + itemsPerLoad);
+    // Check if "View More" button should be visible
+    useEffect(() => {
+        if (displayedPets.length < petsData.length) {
+            setHasMorePets(true);
+        } else {
+            setHasMorePets(false);
+        }
+    }, [displayedPets, petsData]);
+
+    const loadMorePets = async () => {
+        const newPets = await getPets(offset, itemsPerLoad);
         setDisplayedPets((prevPets) => [...prevPets, ...newPets]);
+        setOffset((prevOffset) => prevOffset + itemsPerLoad);
     };
 
     return (
@@ -52,11 +64,11 @@ export default function Home() {
                 <div className="catalog-items">
                     {displayedPets.map((pet, index) => (
                         <PetCard key={`${pet.id}-${index}`} pet={pet} />
-                        ))}
+                    ))}
                 </div>
 
-                {displayedPets.length < petsData.length && (
-                    <button className="view-more" onClick={handleViewMore}>
+                {hasMorePets && (
+                    <button className="view-more" onClick={loadMorePets}>
                         View More
                     </button>
                 )}

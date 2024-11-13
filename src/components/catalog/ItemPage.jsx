@@ -4,7 +4,7 @@ import { PetContext } from './PetContext';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import './ItemPage.css';
-import { getPetById } from '../../api/apiService';
+import { viewmore } from '../../api/apiService';
 import { useEffect } from 'react';
 
 const ItemPage = () => {
@@ -16,7 +16,7 @@ const ItemPage = () => {
     const fetchPet = async () => {
       try {
    
-        const response = await getPetById(id);
+        const response = await viewmore(id);
 
         setPet(response.data);
 

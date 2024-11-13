@@ -3,9 +3,11 @@ import axios from 'axios';
 const API_BASE_URL = 'http://127.0.0.1:5000'; // Вкажіть URL до вашого серверу
 
 // Отримати всі товари (пети)
-export const getPets = async () => {
+export const getPets = async (offset = 0, limit = 10) => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/items`);
+    const response = await axios.get(`${API_BASE_URL}/items`, {
+      params: { offset, limit }
+    });
     console.log('API response:', response);
     if (response.data && Array.isArray(response.data)) {
       return response.data.map((pet, index) => ({
@@ -23,7 +25,7 @@ export const getPets = async () => {
 };
 
 
-export const getPetById = (petId) => axios.get(`${API_BASE_URL}/item/${petId}`);
+export const viewmore = (petId) => axios.get(`${API_BASE_URL}/item/${petId}`);
 
 
 // Створити новий товар (пет) з зображенням

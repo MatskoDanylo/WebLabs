@@ -157,7 +157,11 @@ def create_item():
 
 @app.route('/items', methods=['GET'])
 def get_items():
-    return jsonify([pet.to_dict() for pet in data]), 200
+    offset = int(request.args.get('offset', 0))
+    limit = int(request.args.get('limit', 10))
+    data_dict = load_data()
+    paginated_data = data_dict[offset:offset + limit]
+    return jsonify(paginated_data), 200
 
 @app.route('/sort', methods=['POST'])
 def sort_items():

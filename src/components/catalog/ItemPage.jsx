@@ -1,24 +1,34 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { PetContext } from './PetContext';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import './ItemPage.css';
+import { getPetById } from '../../api/apiService';
+import { useEffect } from 'react';
 
 const ItemPage = () => {
+  const [pet, setPet] = useState(null);
   const { id } = useParams();
   const navigate = useNavigate();
-  const { petsData } = useContext(PetContext);
 
-  // Check if pets are defined
-  if (!petsData || petsData.length === 0) {
-    return <p>Loading...</p>;
-  }
+  useEffect(() => {
+    const fetchPet = async () => {
+      try {
+   
+        const response = await getPetById(id);
 
-  // Find the pet by id
-  const pet = petsData.find((pet) => pet.id === parseInt(id));
+        setPet(response.data);
 
-  // Handle the case where the pet is not found
+      } catch (error) {
+        console.error("Error fetching pet:", error);
+         
+      }
+    };
+    fetchPet();
+  }, [id, navigate]);
+  
+
   if (!pet) {
     return <p>Pet not found</p>;
   }

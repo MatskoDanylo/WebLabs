@@ -5,10 +5,9 @@ import './Catalog.css';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import SortSection from './SortSection';
-import { getPets, searchAndSortPets } from '../../api/apiService';
 import Loader from '../Loader';
 import AddPetForm from './AddPetForm';
-import { createPet } from '../../api/apiService';
+import { createPet, getPets, searchAndSortPets } from '../../api/apiService';
 import { PetContext } from './PetContext';
 
 const Catalog = () => {
@@ -17,7 +16,7 @@ const Catalog = () => {
   const [loading, setLoading] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [sortOption, setSortOption] = useState("name(a-z)");
+  const [sortOption, setSortOption] = useState("Choose one...");
 
   // Filter states
   const [minAge, setMinAge] = useState(0);
@@ -28,27 +27,30 @@ const Catalog = () => {
   useEffect(() => {
     setLoading(true);
     getPets()
-      .then(response => {
-        setPets(response.data);
-        setPetsData(response.data);
+      .then(petsWithUniqueKeys => {
+        setPets(petsWithUniqueKeys);
+        setPetsData(petsWithUniqueKeys);
         setLoading(false);
       })
       .catch(error => {
         console.error("Error fetching pets:", error);
         setLoading(false);
       });
-  }, []);
+  }, [setPetsData]);
 
-  // Fetch pets when search or sort criteria change
   useEffect(() => {
     handleSearchAndSort();
-  }, [sortOption]); // Add sortOption dependency
+  }, [sortOption]);
 
   const handleSearchAndSort = () => {
     setLoading(true);
     searchAndSortPets(searchTerm, sortOption, minAge, maxAge, minPrice, maxPrice)
       .then(response => {
-        setPets(response.data);
+        const petsWithUniqueKeys = response.data.map((pet, index) => ({
+          ...pet,
+          uniqueKey: `${pet.id}-${index}`, // Ensure unique keys
+        }));
+        setPets(petsWithUniqueKeys);
         setLoading(false);
       })
       .catch(error => {
@@ -64,8 +66,12 @@ const Catalog = () => {
   const handleSavePet = (newPetData, image) => {
     createPet(newPetData, image)
       .then(response => {
-        setPets(prevPets => [...prevPets, response.data]);
-        setPetsData(prevPetsData => [...prevPetsData, response.data]);
+        const newPet = {
+          ...response.data,
+          uniqueKey: `${response.data.id}-${pets.length}`, // Ensure unique keys
+        };
+        setPets(prevPets => [...prevPets, newPet]);
+        setPetsData(prevPetsData => [...prevPetsData, newPet]);
         setShowAddForm(false);
       })
       .catch(error => {
@@ -118,8 +124,6 @@ const Catalog = () => {
             <PrimaryButton label="Search & Sort" onClick={handleSearchAndSort} />
           </div>
         </div>
-        
-        {/* Pass the handleSort directly to update sortOption on selection */}
         <SortSection sortOption={sortOption} handleSort={(e) => setSortOption(e.target.value)} />
 
         {loading ? (
@@ -127,7 +131,7 @@ const Catalog = () => {
         ) : (
           <div className="product-list">
             {pets.map(pet => (
-              <PetCard key={pet.id} pet={pet} />
+              <PetCard key={pet.uniqueKey} pet={pet} />
             ))}
           </div>
         )}

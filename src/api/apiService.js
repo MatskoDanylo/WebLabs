@@ -1,9 +1,30 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://127.0.0.1:5000'; 
+const API_BASE_URL = 'http://127.0.0.1:5000'; // Вкажіть URL до вашого серверу
 
 // Отримати всі товари (пети)
-export const getPets = () => axios.get(`${API_BASE_URL}/items`);
+export const getPets = async () => {
+  try {
+    const response = await axios.get(`${API_BASE_URL}/items`);
+    console.log('API response:', response);
+    if (response.data && Array.isArray(response.data)) {
+      return response.data.map((pet, index) => ({
+        ...pet,
+        uniqueKey: `${pet.id}-${index}`, // Ensure unique keys
+      }));
+    } else {
+      console.error("Unexpected API response format:", response);
+      return [];
+    }
+  } catch (error) {
+    console.error("Error fetching pets:", error);
+    return [];
+  }
+};
+
+
+export const getPetById = (petId) => axios.get(`${API_BASE_URL}/item/${petId}`);
+
 
 // Створити новий товар (пет) з зображенням
 export const createPet = (petData, image) => {

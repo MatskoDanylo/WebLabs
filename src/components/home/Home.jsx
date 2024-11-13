@@ -50,9 +50,9 @@ export default function Home() {
                 </div>
 
                 <div className="catalog-items">
-                    {displayedPets.map((pet) => (
-                        <PetCard key={pet.id} pet={pet} />
-                    ))}
+                    {displayedPets.map((pet, index) => (
+                        <PetCard key={`${pet.id}-${index}`} pet={pet} />
+                        ))}
                 </div>
 
                 {displayedPets.length < petsData.length && (

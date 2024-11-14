@@ -110,6 +110,15 @@ def search_and_sort_items():
     return jsonify(sorted_data)
 
 
+@app.route('/item/<int:item_id>', methods=['GET'])
+def get_item(item_id):
+    data_dict = load_data()
+    pet = next((pet for pet in data_dict if pet['id'] == item_id), None)
+    if pet:
+        return jsonify(pet), 200
+    else:
+        return jsonify({"error": "Pet not found"}), 404
+
 
 @app.route('/count_price', methods=['POST'])
 def count_price():

@@ -58,4 +58,46 @@
   .back-button:hover {
     background-color: #005f7a;
   }
+  .selectors {
+    margin: 20px 0;
+  }
   
+  .quantity-selector,
+  .color-selector {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quantity-selector label,
+  .color-selector label {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .quantity-selector input,
+  .color-selector select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .add-to-cart-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+   
+    margin: 25px;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #0056b3;
+  }
